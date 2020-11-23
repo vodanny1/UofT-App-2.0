@@ -29,7 +29,6 @@ class CourseViewController: UIViewController {
     }
     
     func setupTableView() {
-        
         // Adding tableview to this View Controller
         view.addSubview(tableView)
         
