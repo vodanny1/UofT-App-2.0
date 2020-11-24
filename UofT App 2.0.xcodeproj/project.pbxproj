@@ -23,7 +23,7 @@
 		994CEB28256C652B0054CE9E /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CEB27256C652B0054CE9E /* MainNavigationController.swift */; };
 		994CEB2D256C65360054CE9E /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CEB2C256C65360054CE9E /* MainTabBarController.swift */; };
 		994CEB38256C67040054CE9E /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CEB37256C67040054CE9E /* SearchController.swift */; };
-		994CEB3D256C749E0054CE9E /* CourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CEB3C256C749E0054CE9E /* CourseCell.swift */; };
+		994CEB3D256C749E0054CE9E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CEB3C256C749E0054CE9E /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,7 @@
 		994CEB27256C652B0054CE9E /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		994CEB2C256C65360054CE9E /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		994CEB37256C67040054CE9E /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
-		994CEB3C256C749E0054CE9E /* CourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCell.swift; sourceTree = "<group>"; };
+		994CEB3C256C749E0054CE9E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 				994CEB18256C64CD0054CE9E /* Course.swift */,
 				994CEB22256C65030054CE9E /* CourseDetailController.swift */,
 				994CEB1D256C64E60054CE9E /* CourseViewController.swift */,
-				994CEB3C256C749E0054CE9E /* CourseCell.swift */,
+				994CEB3C256C749E0054CE9E /* TableViewCell.swift */,
 				99429BB4256DB53900100943 /* Buildings.swift */,
 				99429BB9256DB55900100943 /* BuildingDetailController.swift */,
 				99429BBE256DB56400100943 /* BuildingViewController.swift */,
@@ -288,7 +288,7 @@
 				994CEB2D256C65360054CE9E /* MainTabBarController.swift in Sources */,
 				994CEAE4256C63B40054CE9E /* ViewController.swift in Sources */,
 				994CEAE0256C63B40054CE9E /* AppDelegate.swift in Sources */,
-				994CEB3D256C749E0054CE9E /* CourseCell.swift in Sources */,
+				994CEB3D256C749E0054CE9E /* TableViewCell.swift in Sources */,
 				994CEB1E256C64E60054CE9E /* CourseViewController.swift in Sources */,
 				99429BBA256DB55900100943 /* BuildingDetailController.swift in Sources */,
 				994CEAE2256C63B40054CE9E /* SceneDelegate.swift in Sources */,

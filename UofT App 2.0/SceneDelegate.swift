@@ -18,8 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
         
-        // View Controllers created
+        // Tab Bar Controllers created
         let tabBarController = MainTabBarController()
+        
+        /*
+                NAVIGATION CONTROLLERS
+         */
         
         // Course Navigation Controller
         let courseNavigationController = MainNavigationController()
@@ -31,6 +35,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         buildingNavigationController.title = "Buildings"
         buildingNavigationController.navigationBar.prefersLargeTitles = true
         
+        /*
+                VIEW CONTROLLERS
+         */
+        
         // Courses View Controller
         let courseViewController = CourseViewController()
         courseViewController.title = "Courses"
@@ -39,13 +47,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let buildingViewController = BuildingViewController()
         buildingViewController.title = "Buildings"
         
+        /*
+                EMBEDDING VIEW CONTROLLERS IN NAVIGATION CONTROLLER
+         */
+        
         // Embedding Courses to Navigation Controller
         courseNavigationController.viewControllers = [courseViewController]
         
         // Embedding Buildings to Navigation Controller
         buildingNavigationController.viewControllers = [buildingViewController]
         
-        // Tab Bar Controller
+        // Adding the navigation controllers into the tab bar controller
         tabBarController.viewControllers = [courseNavigationController, buildingNavigationController]
         
         // Set window to scene

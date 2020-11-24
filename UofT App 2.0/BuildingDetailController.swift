@@ -46,7 +46,7 @@ class BuildingDetailController: UIViewController, UITableViewDelegate {
         
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive    = true
         
-        tableView.register(CourseCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "buildingCell")
     }
     
     func setTableViewDelegates() {

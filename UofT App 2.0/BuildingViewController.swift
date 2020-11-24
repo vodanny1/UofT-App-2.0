@@ -46,13 +46,12 @@ class BuildingViewController: UIViewController {
         
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive    = true
         
-        tableView.register(CourseCell.self, forCellReuseIdentifier: "buildingCell")
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "buildingCell")
     }
     
     func setTableViewDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.contentInsetAdjustmentBehavior = .never
     }
     
     func getData(from url: String) {
