@@ -180,8 +180,4 @@ extension CourseDetailViewController: UITableViewDataSource {
         cell.textLabel?.text = total[indexPath.section][indexPath.row]
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        return UITableViewCell()
-//    }
 }
