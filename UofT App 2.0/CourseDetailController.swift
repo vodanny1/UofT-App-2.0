@@ -94,7 +94,6 @@ class CourseDetailViewController: UIViewController {
                     } else {
                         courseDate.append("End: " + String(end) + ":00 AM")
                     }
-                    
                 }
                 
                 let duration = course.meeting_sections[index].times[0].duration! / 3600
