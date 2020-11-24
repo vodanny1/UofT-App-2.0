@@ -10,7 +10,7 @@ University of Toronto app that shows courses, buildings, exam locations, textboo
 
 ### App
 
-Built using Swift 5.3 with UIKit.
+Built using Swift 5.3 with UIKit. Compatible with iOS 14.0 and above.
 
 ### Screenshots
 
