@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99429BB5256DB53900100943 /* Buildings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99429BB4256DB53900100943 /* Buildings.swift */; };
+		99429BBA256DB55900100943 /* BuildingDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99429BB9256DB55900100943 /* BuildingDetailController.swift */; };
+		99429BBF256DB56400100943 /* BuildingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99429BBE256DB56400100943 /* BuildingViewController.swift */; };
 		994CEAE0256C63B40054CE9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CEADF256C63B40054CE9E /* AppDelegate.swift */; };
 		994CEAE2256C63B40054CE9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CEAE1256C63B40054CE9E /* SceneDelegate.swift */; };
 		994CEAE4256C63B40054CE9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994CEAE3256C63B40054CE9E /* ViewController.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		99429BB4256DB53900100943 /* Buildings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buildings.swift; sourceTree = "<group>"; };
+		99429BB9256DB55900100943 /* BuildingDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingDetailController.swift; sourceTree = "<group>"; };
+		99429BBE256DB56400100943 /* BuildingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingViewController.swift; sourceTree = "<group>"; };
 		994CEADC256C63B40054CE9E /* UofT App 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UofT App 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		994CEADF256C63B40054CE9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		994CEAE1256C63B40054CE9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +130,9 @@
 				994CEB22256C65030054CE9E /* CourseDetailController.swift */,
 				994CEB1D256C64E60054CE9E /* CourseViewController.swift */,
 				994CEB3C256C749E0054CE9E /* CourseCell.swift */,
+				99429BB4256DB53900100943 /* Buildings.swift */,
+				99429BB9256DB55900100943 /* BuildingDetailController.swift */,
+				99429BBE256DB56400100943 /* BuildingViewController.swift */,
 			);
 			path = "UofT App 2.0";
 			sourceTree = "<group>";
@@ -281,9 +290,12 @@
 				994CEAE0256C63B40054CE9E /* AppDelegate.swift in Sources */,
 				994CEB3D256C749E0054CE9E /* CourseCell.swift in Sources */,
 				994CEB1E256C64E60054CE9E /* CourseViewController.swift in Sources */,
+				99429BBA256DB55900100943 /* BuildingDetailController.swift in Sources */,
 				994CEAE2256C63B40054CE9E /* SceneDelegate.swift in Sources */,
 				994CEB28256C652B0054CE9E /* MainNavigationController.swift in Sources */,
 				994CEB38256C67040054CE9E /* SearchController.swift in Sources */,
+				99429BBF256DB56400100943 /* BuildingViewController.swift in Sources */,
+				99429BB5256DB53900100943 /* Buildings.swift in Sources */,
 				994CEB23256C65030054CE9E /* CourseDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

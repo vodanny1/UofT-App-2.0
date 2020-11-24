@@ -21,20 +21,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // View Controllers created
         let tabBarController = MainTabBarController()
         
-        // Navigation Controller
-        let navigationController = MainNavigationController()
-        navigationController.title = "Courses"
-        navigationController.navigationBar.prefersLargeTitles = true
+        // Course Navigation Controller
+        let courseNavigationController = MainNavigationController()
+        courseNavigationController.title = "Courses"
+        courseNavigationController.navigationBar.prefersLargeTitles = true
+        
+        // Building Navigation Controller
+        let buildingNavigationController = MainNavigationController()
+        buildingNavigationController.title = "Buildings"
+        buildingNavigationController.navigationBar.prefersLargeTitles = true
         
         // Courses View Controller
         let courseViewController = CourseViewController()
         courseViewController.title = "Courses"
         
-        // Adding Courses to Navigation Controller
-        navigationController.viewControllers = [courseViewController]
+        // Buildings View Controller
+        let buildingViewController = BuildingViewController()
+        buildingViewController.title = "Buildings"
+        
+        // Embedding Courses to Navigation Controller
+        courseNavigationController.viewControllers = [courseViewController]
+        
+        // Embedding Buildings to Navigation Controller
+        buildingNavigationController.viewControllers = [buildingViewController]
         
         // Tab Bar Controller
-        tabBarController.viewControllers = [navigationController]
+        tabBarController.viewControllers = [courseNavigationController, buildingNavigationController]
         
         // Set window to scene
         window = UIWindow(windowScene: scene)
