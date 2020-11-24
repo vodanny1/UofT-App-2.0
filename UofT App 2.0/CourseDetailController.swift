@@ -172,10 +172,11 @@ extension CourseDetailViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-
+        
         // allows the text to wrap around to the next line rather than trailing dots
         cell.textLabel?.numberOfLines = 0
 
+        
         // have a total array, with subarrays to separate for sections
         cell.textLabel?.text = total[indexPath.section][indexPath.row]
         return cell
