@@ -1,4 +1,4 @@
-# UofT-App-2.0
+# University of Toronto Info App 2.0
 
 ### API
 
