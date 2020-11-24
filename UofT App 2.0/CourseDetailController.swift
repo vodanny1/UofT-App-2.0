@@ -176,7 +176,6 @@ extension CourseDetailViewController: UITableViewDataSource {
         // allows the text to wrap around to the next line rather than trailing dots
         cell.textLabel?.numberOfLines = 0
 
-        
         // have a total array, with subarrays to separate for sections
         cell.textLabel?.text = total[indexPath.section][indexPath.row]
         return cell
