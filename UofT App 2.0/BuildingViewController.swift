@@ -11,19 +11,19 @@ import UIKit
 class BuildingViewController: UIViewController {
     
     let tableView = UITableView()
-    var courses = [CourseResult]()
-    var total = [[CourseResult]]()
+    var buildings = [BuildingResult]()
     
     override func loadView() {
         super.loadView()
         view.backgroundColor = .white
         
         let searchController = UISearchController(searchResultsController: nil)
-        //searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "Search Course ID"
+        searchController.searchResultsUpdater = self
+        definesPresentationContext = true
+        searchController.searchBar.placeholder = "Search Building ID"
         searchController.obscuresBackgroundDuringPresentation   = false
         
-        navigationItem.searchController = searchController
+        navigationItem.searchController                         = searchController
         navigationItem.hidesSearchBarWhenScrolling              = false
         
         setupTableView()
@@ -46,12 +46,13 @@ class BuildingViewController: UIViewController {
         
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive    = true
         
-        tableView.register(CourseCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(CourseCell.self, forCellReuseIdentifier: "buildingCell")
     }
     
     func setTableViewDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.contentInsetAdjustmentBehavior = .never
     }
     
     func getData(from url: String) {
@@ -60,35 +61,15 @@ class BuildingViewController: UIViewController {
                 print("Something went wrong.")
                 return
             }
-            var result: CourseResponse?
+            var result: BuildingResponse?
             do {
-                result = try JSONDecoder().decode(CourseResponse.self, from: data)
+                result = try JSONDecoder().decode(BuildingResponse.self, from: data)
             } catch {
                 debugPrint(error)
             }
             
             guard let json = result else { return }
-            self.courses = json.response
-            
-            var toronto = [CourseResult]()
-            var mississauga = [CourseResult]()
-            var scarborough = [CourseResult]()
-            
-            for course in self.courses {
-                if course.campus == "St. George" {
-                    toronto.append(course)
-                } else if course.campus == "Mississauga" {
-                    mississauga.append(course)
-                } else if course.campus == "Scarborough" {
-                    scarborough.append(course)
-                }
-            }
-            
-            self.total.removeAll()
-            self.total.append(toronto)
-            self.total.append(mississauga)
-            self.total.append(scarborough)
-            
+            self.buildings = json.response
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -99,37 +80,29 @@ class BuildingViewController: UIViewController {
 
 extension BuildingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return buildings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Toronto"
-        }
-        if section == 1 {
-            return "Mississauga"
-        }
-        if section == 2 {
-            return "Scarborough"
-        }
-        return ""
+        let cell = tableView.dequeueReusableCell(withIdentifier: "buildingCell", for: indexPath)
+        cell.textLabel?.text = buildings[indexPath.row].code + " | " + buildings[indexPath.row].name
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let buildingDetailController = BuildingDetailController()
+        buildingDetailController.building = buildings[indexPath.row]
+        navigationController?.pushViewController(buildingDetailController, animated: true)
     }
 }
 
-//extension BuildingViewController: UISearchResultsUpdating {
-//    func updateSearchResults(for searchController: UISearchController) {
-//
-//    }
-//}
+extension BuildingViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        
+        if searchBar.text!.count > 0 {
+            let url = "https://nikel.ml/api/buildings?code==" + searchBar.text!.uppercased()
+            getData(from: url)
+        }
+    }
+}
